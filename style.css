@@ -1,0 +1,701 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #170925; /* Fond sombre */
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+
+.hero-section {
+    position: relative; /* Permet de positionner le contenu au-dessus */
+    height: 100vh; /* Hauteur de la section de fond d'écran */
+    background-image: url('img/background-maquette.webp'); /* Image de fond */
+    background-size: cover; /* Couvre toute la section */
+    background-position: center; /* Centre l'image */
+    display: flex; /* Utilise flexbox pour centrer le contenu */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    color: #fff; /* Couleur du texte */
+}
+
+/* Header */
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 50px;
+    z-index: 100;
+
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* Logo */
+.logo img {
+    height: 23px;
+   
+}
+
+/* Navigation Menu */
+.main-nav {
+    display: flex;
+    align-items: center;
+}
+
+.main-nav .nav-list {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+}
+
+/* Styling for Menu Buttons */
+.main-nav .nav-list li {
+    display: inline;
+}
+
+.main-nav .nav-list li a.nav-link {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #404040; /* Fond du bouton */
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    
+    border-radius: 50px; /* Bord arrondi */
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+}
+
+.main-nav .nav-list {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #262626; /* Fond du bouton */
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 50px; /* Bord arrondi */
+    transition: background-color 0.3s ease, border 0.3s ease; /* Ajout d'une transition pour la bordure */
+    font-weight: 500;
+    border: 2px solid #FDBA74; /* Bordure transparente par défaut */
+}
+
+.main-nav .nav-list li a.nav-link:hover {
+    background-color: #FDBA74; /* Couleur au survol */
+}
+
+/* Hamburger Menu (Mobile) */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger-menu .bar {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    display: none;
+    background-color: #121212;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 250px;
+    height: 100vh;
+    padding-top: 20px;
+}
+
+.mobile-menu .mobile-nav {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.mobile-menu .mobile-nav li {
+    margin-bottom: 20px;
+}
+
+.mobile-menu .mobile-nav li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .main-nav {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .mobile-menu.active {
+        display: block;
+    }
+
+  
+}
+
+/* Contenu du texte */
+.hero-content {
+    text-align: center;
+    position: absolute;
+    z-index: 10; /* Assure que le texte est au-dessus de l'image */
+}
+
+.text-content {
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 3rem; /* Taille du titre principal */
+    margin-bottom: 10px; /* Espacement sous le titre */
+}
+
+.hero-content h2 {
+    font-size: 2rem; /* Taille du sous-titre */
+    margin-bottom: 20px;
+}
+
+.welcome-message {
+    font-size: 1.25rem; /* Taille du texte d'accueil */
+    margin-bottom: 10px;
+}
+
+.name {
+    font-size: 1.5rem; /* Taille du nom */
+    font-weight: bold;
+}
+
+/* Media Queries pour améliorer la responsivité */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .text-content {
+        padding: 15px;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+.projects-section {
+    text-align: center;
+    margin: 50px 0;
+    text-decoration: none;
+}
+
+.projects-section h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.project-card {
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    background-color: #262626;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    list-style: none;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.project-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+.project-single-image {
+    height: 80vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.project-info {
+    padding: 15px;
+    text-align: left;
+}
+
+.project-info h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 10px;
+    display: -webkit-box; /* For Safari */
+    -webkit-line-clamp: 3; /* Limit text to 3 lines */
+    -webkit-box-orient: vertical; /* Make it work in a vertical direction */
+    overflow: hidden; /* Hide the overflowed text */
+    text-overflow: ellipsis; /* Add the ellipsis (…) */
+}
+
+
+.tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background-color: transparent;
+    border: 1px solid #FDBA74;
+    color: #FDBA74;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+.cate {
+    background-color: #262626;
+    border: 1px solid #FDBA74;
+    color: #FDBA74;
+    padding: 10px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+
+
+}
+
+
+.software-logos {
+    text-align: center;
+    margin-top: 50px; /* Espace au-dessus de la section */
+}
+
+.logos-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Espacement entre les logos */
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.logos-container img {
+    width: 50px; /* Taille des logos */
+    height: 50px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logos-container img:hover {
+    transform: scale(1.1); /* Agrandir légèrement au survol */
+}
+
+
+/* Section Mon Histoire */
+.mon-histoire-section {
+    color: #ffffff; /* Texte en blanc */
+    padding: 10% 20px;
+  }
+  
+  .mon-histoire-section .container {
+ 
+    margin-right: 2%;
+    margin-left: 2%;
+  }
+  
+  .section-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .mon-histoire-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 40px;
+  }
+  
+  .mascotte {
+    flex: 1 1 300px;
+    position: relative;
+    text-align: center;
+    border-right: 2px solid #ffffff; /* Ligne blanche entre la mascotte et le texte */
+    padding-right: 20px; /* Espacement entre la mascotte et la ligne */
+  }
+  .mascotte img {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+
+  .histoire-texte {
+    flex: 2 1 600px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #d9d9d9;
+  }
+  
+  .histoire-texte strong {
+    color: #ffffff; /* Texte en gras plus visible */
+    font-size: 18px;
+  }
+  
+/* Section Contact */
+.contact-section {
+
+    color: #ffffff; /* Texte en blanc */
+    padding: 50px 20px;
+  }
+  
+  .contact-section .container {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  
+  .section-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 40px;
+  }
+  
+
+  .contact-section{
+  padding-top: 10%;
+}
+  
+  /* Formulaire */
+  .formulaire {
+  
+    flex: 2 1 600px;
+    font-family: 'Poppins', sans-serif;
+    color: #d9d9d9;
+  }
+  
+  .formulaire form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .formulaire label {
+    font-size: 16px;
+  }
+  
+  .formulaire input,
+  .formulaire textarea {
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #1e1e1e;
+    color: #fff;
+    font-size: 16px;
+    width: 100%;
+  }
+  
+  .formulaire input::placeholder,
+  .formulaire textarea::placeholder {
+    color: #bbb;
+  }
+  
+  .formulaire input:focus,
+  .formulaire textarea:focus {
+    border-color: #5c3d96;
+    outline: none;
+  }
+  
+  .submit-btn {
+    background-color: #5c3d96;
+    color: #fff;
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-btn:hover {
+    background-color: #4a2c70;
+  }
+  
+  /* Animation pour la mascotte et le formulaire */
+  .mascotte {
+    transition: transform 0.3s ease;
+  }
+  
+  .mascotte:hover {
+    transform: scale(1.1); /* Légère agrandissement de la mascotte au survol */
+  }
+  
+
+  
+  @media (min-width: 1000px) {
+    html {
+      scroll-behavior: smooth; /* Activates smooth scroll */
+    }
+  section {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; /* Transition pour fade-in */
+  }
+  
+  section.visible {
+    opacity: 1;
+  }
+  
+}
+.single-project {
+  background-color: white;
+  color: black;
+  width: 100%;
+}
+
+/* Style du Footer */
+.site-footer {
+  background-color: #1c1c1c; /* Couleur de fond noir */
+  color: white; /* Couleur du texte */
+  padding: 20px 0; /* Espacement vertical */
+  text-align: center; /* Centrer tout le contenu */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between; /* Espacement entre les éléments */
+  align-items: center; /* Centrer verticalement les éléments */
+  max-width: 1200px;
+  margin: 0 auto; /* Centrer le contenu */
+  padding: 0 20px; /* Espacement interne */
+}
+
+.footer-nav .logo {
+  font-size: 18px;
+}
+
+.footer-nav a img {
+  max-height: 40px; /* Hauteur du logo */
+}
+
+.footer-info p {
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Mise en place du design responsive */
+@media (max-width: 768px) {
+  .footer-content {
+      flex-direction: column; /* Empile les éléments en colonne sur mobile */
+      text-align: center;
+  }
+
+  .footer-nav {
+      margin-bottom: 20px;
+  }
+}
+
+.project-details {
+    margin: 20px;
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 colonnes flexibles */
+  grid-template-rows: auto; /* Les lignes s'ajustent à la taille du contenu */
+  gap: 20px; /* Espacement entre les éléments */
+  margin-top: 40px;
+}
+
+.project-image {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Remplir la zone sans déformer l'image */
+}
+
+/* Disposition spécifique des images */
+.project-image:nth-child(1) {
+  grid-column: span 2; /* Cette image prend 2 colonnes */
+  grid-row: span 2; /* Cette image prend 2 lignes */
+}
+
+.project-image:nth-child(2) {
+  grid-column: span 2; /* Cette image prend 2 colonnes */
+}
+
+.project-image:nth-child(3) {
+  grid-column: span 1; /* Cette image prend 1 colonne */
+  grid-row: span 2; /* Cette image prend 2 lignes */
+}
+
+.project-image:nth-child(4) {
+  grid-column: span 1; /* Cette image prend 1 colonne */
+}
+
+.project-image:nth-child(5) {
+  grid-column: span 2; /* Cette image prend 2 colonnes */
+  grid-row: span 1; /* Cette image prend 1 ligne */
+}
+
+/* Disposition responsive */
+@media (max-width: 768px) {
+  .project-gallery {
+      grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur les petits écrans */
+  }
+
+  .project-image:nth-child(1) {
+      grid-column: span 2;
+      grid-row: span 1;
+  }
+}
+
+.nojq {
+  display: none;
+}
+
+.services-section {
+  padding: 60px 20px;
+}
+
+.service-card {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: white;
+  
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* 2 colonnes par défaut, et 1 colonne sur petits écrans */
+  gap: 20px;
+}
+
+.service-item {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.service-title {
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #5c3d96;
+}
+
+.service-description {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Disposition responsive */
+@media (max-width: 768px) {
+  .hero-image img {
+      width: 80%;
+  }
+}
+
+
+.project-description {
+
+  border-left: 4px solid #5c3d96; /* Bordure colorée à gauche pour un effet visuel supplémentaire */
+  padding-left: 15px; /* Un peu d'espace entre la bordure et le texte */
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.project-description {
+  font-size: 16px; /* Taille de police agréable pour la lecture */
+  line-height: 1.8; /* Augmentation de l'espacement entre les lignes */
+  color: #333; /* Couleur sombre pour le texte */
+  margin-top: 20px; /* Un peu d'espace au-dessus de la description */
+  margin-bottom: 20px; /* Un peu d'espace en dessous */
+  text-align: justify; /* Justification du texte pour un aspect plus uniforme */
+  font-family: 'Arial', sans-serif; /* Choix d'une police simple et lisible */
+  padding: 0 20px; /* Un peu de padding pour espacer le texte des bords */
+}
